@@ -1,0 +1,14 @@
+.h{
+    color: white;
+    margin-right: 30px;
+    font-size: 20px;
+}
+.h:hover{
+    color: red;
+}
+.itemadd{
+    box-shadow: 0px 0px 10px gray;
+    border-radius:5%;
+    margin-top: 40px;
+    padding: 20px;
+} 

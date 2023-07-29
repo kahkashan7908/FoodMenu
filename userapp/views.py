@@ -9,6 +9,7 @@ def register(request):
         form=RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
+            #reteriving user name 
             username=form.cleaned_data.get('username')
             messages.success(request,f'welcom {username} your account is register')
             return redirect('login')
@@ -16,6 +17,7 @@ def register(request):
         form=RegistrationForm()
     return render(request,'register.html',{'form':form})
 
+#restrict access profile 
 @login_required
 def profilePage(request):
     return render(request,'profile.html')

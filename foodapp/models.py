@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 # Create your models here.
 class foodItem(models.Model):
+    # relationship between foodItem model and User model
     user_name=models.ForeignKey(User,on_delete=models.CASCADE,default=1)
+
     item_name=models.CharField(max_length=200)
     item_desc=models.CharField( max_length=200)
     item_price=models.IntegerField()

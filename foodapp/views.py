@@ -11,7 +11,7 @@ from django.views.generic.edit import CreateView
 # def index(request):
 #     data=foodItem.objects.all()
 #     return render(request,'index.html',{'data':data})
-
+#index class view 
 class IndexClassView(ListView):
     model=foodItem
     template_name='index.html'
@@ -22,6 +22,7 @@ class IndexClassView(ListView):
 #     data=foodItem.objects.get(id=item_id)
 #     return render(request,'details.html',{'data':data})
 
+#view for food deatails
 class FoodDetail(DetailView):
     model=foodItem
     template_name="details.html"

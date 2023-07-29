@@ -4,6 +4,8 @@ from .forms import RegistrationForm
 from django.contrib import messages
 
 # Create your views here.
+
+#view for registration page
 def register(request):
     if request.method=='POST':
         form=RegistrationForm(request.POST)
@@ -11,7 +13,7 @@ def register(request):
             form.save()
             #reteriving user name 
             username=form.cleaned_data.get('username')
-            messages.success(request,f'welcom {username} your account is register')
+            messages.success(request,f'welcome {username} your account is register')
             return redirect('login')
     else:
         form=RegistrationForm()
